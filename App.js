@@ -1,18 +1,18 @@
-import React from 'react';
 import { Location, Order, OrderDetail } from "./screens";
-import { createStackNavigator } from "@react-navigation/stack";
-import { NavigationContainer } from '@react-navigation/native';
-import SplashScreen from 'react-native-splash-screen'
 
+import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
+import SplashScreen from 'react-native-splash-screen'
 import Tabs from "./navigation/tabs";
+import { createStackNavigator } from "@react-navigation/stack";
 
 const Stack = createStackNavigator();
 
 const App = () => {
 
-    React.useEffect(() => {
-        SplashScreen.hide();
-    }, [])
+    // React.useEffect(() => {
+    //     SplashScreen.hide();
+    // }, [])
 
     return (
         <NavigationContainer>
