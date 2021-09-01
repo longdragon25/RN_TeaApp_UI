@@ -17,25 +17,23 @@ import React from "react";
 
 const Tab = createBottomTabNavigator();
 
-const CustomTabBar =(props) =>{
-    return(
-        <View>
-            <View
-                style={{
-                    position: "absolute",
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    height: 30,
-                    backgroundColor: COLORS.gray3
-                }}
-            />
-            <BottomTabBar
-                {...props.props}
-            />
-        </View>
-    )
-}
+const CustomTabBar = (props) => {
+  return (
+    <View>
+      <View
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: 30,
+          backgroundColor: COLORS.gray3,
+        }}
+      />
+      <BottomTabBar {...props.props} />
+    </View>
+  );
+};
 
 const CustomBarButton = ({ containerStyle, isFloat, children, onPress }) => {
   if (isFloat) {
@@ -102,14 +100,10 @@ const Tabs = () => {
           elevation: 0,
           backgroundColor: "transparent",
           borderTopColor: "transparent",
-          height: Platform.OS == "android" ? 60 : 70,
+          height: Platform.OS == "android" ? 60 : 60,
         },
       }}
-      tabBar={(props) =>(
-          <CustomTabBar
-            props={props}
-          />
-      ) }
+      tabBar={(props) => <CustomTabBar props={props} />}
     >
       <Tab.Screen
         name="Home"
@@ -152,11 +146,11 @@ const Tabs = () => {
             />
           ),
           tabBarButton: (props) => (
-            <CustomBarButton 
-                {...props}
-                containerStyle={{
-                    marginRight:4
-                }} 
+            <CustomBarButton
+              {...props}
+              containerStyle={{
+                marginRight: 4,
+              }}
             />
           ),
         }}
@@ -198,9 +192,12 @@ const Tabs = () => {
             />
           ),
           tabBarButton: (props) => (
-            <CustomBarButton {...props} containerStyle={{
-                marginLeft:4
-            }}/>
+            <CustomBarButton
+              {...props}
+              containerStyle={{
+                marginLeft: 4,
+              }}
+            />
           ),
         }}
       />
