@@ -1,5 +1,4 @@
+import CustomButton from "./CustomButton";
 import HeaderBar from "./HeaderBar";
 
-export {
-    HeaderBar,
-}
+export { HeaderBar, CustomButton };
